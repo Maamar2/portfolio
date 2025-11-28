@@ -1,0 +1,242 @@
+﻿
+> portfolio@0.0.0 lint
+> eslint .
+
+
+C:\Users\20010\Desktop\portfolio\src\Portfolio.jsx
+  104:32  error  'Icon' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      no-unused-vars
+  237:26  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  235 |
+  236 |                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+> 237 |                         <TechBadge icon={Code} label="Rust (Systems)" color="text-orange-500" />
+      |                          ^^^^^^^^^ This component is created during render
+  238 |                         <TechBadge icon={Smartphone} label="Android Dev" color="text-green-500" />
+  239 |                         <TechBadge icon={Code} label="Python" color="text-yellow-400" />
+  240 |                         <TechBadge icon={Server} label="DevOps/Docker" color="text-blue-400" />
+
+  102 |     ];
+  103 |
+> 104 |     const TechBadge = ({ icon: Icon, label, color }) => (
+      |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |         <div className="flex items-center gap-2 bg-slate-800/50 border border-slate-700 px-4 py-2 rounded hover:border-emerald-500/50 transition-all cursor-crosshair group">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 106 |             <Icon size={18} className={`${color} group-hover:animate-pulse`} />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 107 |             <span className="font-mono text-sm text-slate-300">{label}</span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 108 |         </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 109 |     );
+      | ^^^^^^ The component is created during render here
+  110 |
+  111 |     return (
+  112 |         <div dir="rtl" className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-emerald-500/30">                                                                                                                react-hooks/static-components
+  238:26  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  236 |                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+  237 |                         <TechBadge icon={Code} label="Rust (Systems)" color="text-orange-500" />
+> 238 |                         <TechBadge icon={Smartphone} label="Android Dev" color="text-green-500" />
+      |                          ^^^^^^^^^ This component is created during render
+  239 |                         <TechBadge icon={Code} label="Python" color="text-yellow-400" />
+  240 |                         <TechBadge icon={Server} label="DevOps/Docker" color="text-blue-400" />
+  241 |                         <TechBadge icon={Shield} label="CEH (Hacking)" color="text-red-500" />
+
+  102 |     ];
+  103 |
+> 104 |     const TechBadge = ({ icon: Icon, label, color }) => (
+      |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |         <div className="flex items-center gap-2 bg-slate-800/50 border border-slate-700 px-4 py-2 rounded hover:border-emerald-500/50 transition-all cursor-crosshair group">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 106 |             <Icon size={18} className={`${color} group-hover:animate-pulse`} />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 107 |             <span className="font-mono text-sm text-slate-300">{label}</span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 108 |         </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 109 |     );
+      | ^^^^^^ The component is created during render here
+  110 |
+  111 |     return (
+  112 |         <div dir="rtl" className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-emerald-500/30">                 react-hooks/static-components
+  239:26  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  237 |                         <TechBadge icon={Code} label="Rust (Systems)" color="text-orange-500" />
+  238 |                         <TechBadge icon={Smartphone} label="Android Dev" color="text-green-500" />
+> 239 |                         <TechBadge icon={Code} label="Python" color="text-yellow-400" />
+      |                          ^^^^^^^^^ This component is created during render
+  240 |                         <TechBadge icon={Server} label="DevOps/Docker" color="text-blue-400" />
+  241 |                         <TechBadge icon={Shield} label="CEH (Hacking)" color="text-red-500" />
+  242 |                         <TechBadge icon={Globe} label="CCNA/CCNP" color="text-cyan-400" />
+
+  102 |     ];
+  103 |
+> 104 |     const TechBadge = ({ icon: Icon, label, color }) => (
+      |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |         <div className="flex items-center gap-2 bg-slate-800/50 border border-slate-700 px-4 py-2 rounded hover:border-emerald-500/50 transition-all cursor-crosshair group">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 106 |             <Icon size={18} className={`${color} group-hover:animate-pulse`} />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 107 |             <span className="font-mono text-sm text-slate-300">{label}</span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 108 |         </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 109 |     );
+      | ^^^^^^ The component is created during render here
+  110 |
+  111 |     return (
+  112 |         <div dir="rtl" className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-emerald-500/30">  react-hooks/static-components
+  240:26  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  238 |                         <TechBadge icon={Smartphone} label="Android Dev" color="text-green-500" />
+  239 |                         <TechBadge icon={Code} label="Python" color="text-yellow-400" />
+> 240 |                         <TechBadge icon={Server} label="DevOps/Docker" color="text-blue-400" />
+      |                          ^^^^^^^^^ This component is created during render
+  241 |                         <TechBadge icon={Shield} label="CEH (Hacking)" color="text-red-500" />
+  242 |                         <TechBadge icon={Globe} label="CCNA/CCNP" color="text-cyan-400" />
+  243 |                         <TechBadge icon={Cpu} label="Linux+" color="text-slate-200" />
+
+  102 |     ];
+  103 |
+> 104 |     const TechBadge = ({ icon: Icon, label, color }) => (
+      |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |         <div className="flex items-center gap-2 bg-slate-800/50 border border-slate-700 px-4 py-2 rounded hover:border-emerald-500/50 transition-all cursor-crosshair group">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 106 |             <Icon size={18} className={`${color} group-hover:animate-pulse`} />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 107 |             <span className="font-mono text-sm text-slate-300">{label}</span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 108 |         </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 109 |     );
+      | ^^^^^^ The component is created during render here
+  110 |
+  111 |     return (
+  112 |         <div dir="rtl" className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-emerald-500/30">            react-hooks/static-components
+  241:26  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  239 |                         <TechBadge icon={Code} label="Python" color="text-yellow-400" />
+  240 |                         <TechBadge icon={Server} label="DevOps/Docker" color="text-blue-400" />
+> 241 |                         <TechBadge icon={Shield} label="CEH (Hacking)" color="text-red-500" />
+      |                          ^^^^^^^^^ This component is created during render
+  242 |                         <TechBadge icon={Globe} label="CCNA/CCNP" color="text-cyan-400" />
+  243 |                         <TechBadge icon={Cpu} label="Linux+" color="text-slate-200" />
+  244 |                         <TechBadge icon={Lock} label="Cryptography" color="text-purple-400" />
+
+  102 |     ];
+  103 |
+> 104 |     const TechBadge = ({ icon: Icon, label, color }) => (
+      |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |         <div className="flex items-center gap-2 bg-slate-800/50 border border-slate-700 px-4 py-2 rounded hover:border-emerald-500/50 transition-all cursor-crosshair group">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 106 |             <Icon size={18} className={`${color} group-hover:animate-pulse`} />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 107 |             <span className="font-mono text-sm text-slate-300">{label}</span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 108 |         </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 109 |     );
+      | ^^^^^^ The component is created during render here
+  110 |
+  111 |     return (
+  112 |         <div dir="rtl" className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-emerald-500/30">                react-hooks/static-components
+  242:26  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  240 |                         <TechBadge icon={Server} label="DevOps/Docker" color="text-blue-400" />
+  241 |                         <TechBadge icon={Shield} label="CEH (Hacking)" color="text-red-500" />
+> 242 |                         <TechBadge icon={Globe} label="CCNA/CCNP" color="text-cyan-400" />
+      |                          ^^^^^^^^^ This component is created during render
+  243 |                         <TechBadge icon={Cpu} label="Linux+" color="text-slate-200" />
+  244 |                         <TechBadge icon={Lock} label="Cryptography" color="text-purple-400" />
+  245 |                     </div>
+
+  102 |     ];
+  103 |
+> 104 |     const TechBadge = ({ icon: Icon, label, color }) => (
+      |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |         <div className="flex items-center gap-2 bg-slate-800/50 border border-slate-700 px-4 py-2 rounded hover:border-emerald-500/50 transition-all cursor-crosshair group">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 106 |             <Icon size={18} className={`${color} group-hover:animate-pulse`} />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 107 |             <span className="font-mono text-sm text-slate-300">{label}</span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 108 |         </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 109 |     );
+      | ^^^^^^ The component is created during render here
+  110 |
+  111 |     return (
+  112 |         <div dir="rtl" className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-emerald-500/30">                                                                              react-hooks/static-components
+  243:26  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  241 |                         <TechBadge icon={Shield} label="CEH (Hacking)" color="text-red-500" />
+  242 |                         <TechBadge icon={Globe} label="CCNA/CCNP" color="text-cyan-400" />
+> 243 |                         <TechBadge icon={Cpu} label="Linux+" color="text-slate-200" />
+      |                          ^^^^^^^^^ This component is created during render
+  244 |                         <TechBadge icon={Lock} label="Cryptography" color="text-purple-400" />
+  245 |                     </div>
+  246 |                 </div>
+
+  102 |     ];
+  103 |
+> 104 |     const TechBadge = ({ icon: Icon, label, color }) => (
+      |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |         <div className="flex items-center gap-2 bg-slate-800/50 border border-slate-700 px-4 py-2 rounded hover:border-emerald-500/50 transition-all cursor-crosshair group">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 106 |             <Icon size={18} className={`${color} group-hover:animate-pulse`} />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 107 |             <span className="font-mono text-sm text-slate-300">{label}</span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 108 |         </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 109 |     );
+      | ^^^^^^ The component is created during render here
+  110 |
+  111 |     return (
+  112 |         <div dir="rtl" className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-emerald-500/30">                                                                                                                                                       react-hooks/static-components
+  244:26  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  242 |                         <TechBadge icon={Globe} label="CCNA/CCNP" color="text-cyan-400" />
+  243 |                         <TechBadge icon={Cpu} label="Linux+" color="text-slate-200" />
+> 244 |                         <TechBadge icon={Lock} label="Cryptography" color="text-purple-400" />
+      |                          ^^^^^^^^^ This component is created during render
+  245 |                     </div>
+  246 |                 </div>
+  247 |             </section>
+
+  102 |     ];
+  103 |
+> 104 |     const TechBadge = ({ icon: Icon, label, color }) => (
+      |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |         <div className="flex items-center gap-2 bg-slate-800/50 border border-slate-700 px-4 py-2 rounded hover:border-emerald-500/50 transition-all cursor-crosshair group">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 106 |             <Icon size={18} className={`${color} group-hover:animate-pulse`} />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 107 |             <span className="font-mono text-sm text-slate-300">{label}</span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 108 |         </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 109 |     );
+      | ^^^^^^ The component is created during render here
+  110 |
+  111 |     return (
+  112 |         <div dir="rtl" className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-emerald-500/30">                                                                                                                                                                                                                               react-hooks/static-components
+
+Γ£û 9 problems (9 errors, 0 warnings)
+

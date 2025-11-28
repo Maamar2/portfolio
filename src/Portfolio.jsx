@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Terminal, Shield, Cpu, Globe, Server, Code, X, ChevronRight, Lock, MapPin, ExternalLink, Hash, User, Languages, Activity, Smartphone, MessageSquare, Send, Clock, DollarSign, FileText, Mail, Phone } from 'lucide-react';
+import { Terminal, Shield, Cpu, Globe, Server, Code, X, ChevronRight, Lock, MapPin, ExternalLink, Hash, User, Languages, Activity, Smartphone, MessageSquare, Send, Clock, DollarSign, FileText, Mail, Phone, Calendar, Tag, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
     const [showTerminal, setShowTerminal] = useState(false);
@@ -289,6 +290,29 @@ const Portfolio = () => {
                 </div>
             </section>
 
+            {/* Blog Section Link */}
+            <section className="py-20 max-w-6xl mx-auto px-6 border-t border-slate-800">
+                <div className="flex items-center gap-4 mb-12">
+                    <FileText className="text-emerald-500" />
+                    <h2 className="text-2xl font-bold font-mono">TRANSMISSIONS (BLOG)</h2>
+                </div>
+
+                <div className="bg-slate-900 border border-slate-800 rounded-lg p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:border-emerald-500/50 transition-all group">
+                    <div>
+                        <h3 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-emerald-400 transition-colors">
+                            ACCESS_SECURE_LOGS
+                        </h3>
+                        <p className="text-slate-400 text-sm max-w-xl">
+                            Read the latest technical breakdowns, security research, and development insights.
+                            Encrypted transmissions available for authorized personnel.
+                        </p>
+                    </div>
+                    <Link to="/blog" className="px-6 py-3 bg-emerald-600/20 border border-emerald-500 text-emerald-400 font-mono font-bold hover:bg-emerald-600 hover:text-white transition-all flex items-center gap-2 rounded whitespace-nowrap">
+                        OPEN_ARCHIVES <ArrowRight size={16} />
+                    </Link>
+                </div>
+            </section>
+
             {/* Contact Project Form */}
             <section id="contact" className="py-24 bg-slate-900/30 border-t border-slate-800">
                 <div className="max-w-4xl mx-auto px-6">
@@ -419,10 +443,10 @@ const Portfolio = () => {
                         <div className="flex-1 p-6 font-mono text-sm overflow-y-auto text-left" dir="ltr" onClick={() => document.getElementById('term-input').focus()}>
                             {terminalOutput.map((line, i) => (
                                 <div key={i} className={`mb-1 ${line.type === 'command' ? 'text-slate-300' :
-                                        line.type === 'error' ? 'text-red-400' :
-                                            line.type === 'success' ? 'text-emerald-400' :
-                                                line.type === 'warning' ? 'text-yellow-400' :
-                                                    'text-slate-400'
+                                    line.type === 'error' ? 'text-red-400' :
+                                        line.type === 'success' ? 'text-emerald-400' :
+                                            line.type === 'warning' ? 'text-yellow-400' :
+                                                'text-slate-400'
                                     }`}>
                                     {line.text}
                                 </div>
